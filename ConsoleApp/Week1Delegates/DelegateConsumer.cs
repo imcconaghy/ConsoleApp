@@ -16,7 +16,6 @@ namespace ConsoleApp.Week1Delegates
         public void ConsumeDelegate()
         {
             var expDelegate = new ExpDelegate();
-
             Multiplier m1 = expDelegate.SquareArea;
             var result = m1(3);
             Console.WriteLine("Result [1]: " + result);
@@ -31,6 +30,17 @@ namespace ConsoleApp.Week1Delegates
             m1 = ObjectCalculator2;
             result = m1(3);
             Console.WriteLine("Result [3]: " + result);
+        }
+
+        public void ConsumeMulticastDelegate()
+        {
+            var expDelegate = new ExpDelegate();
+            Multiplier m1 = expDelegate.SquareArea;
+
+            var expDelegateCalculator = new ExpDelegateCalculator();
+            m1 += expDelegateCalculator.ObjectCapacityCalculator;
+
+            m1(9);
         }
     }
 }

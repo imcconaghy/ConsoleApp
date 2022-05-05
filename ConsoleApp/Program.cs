@@ -23,6 +23,8 @@ namespace ConsoleApp
 
             var consumeDelegate = new DelegateConsumer();
             consumeDelegate.ConsumeDelegate();
+
+            consumeDelegate.ConsumeMulticastDelegate();
         }
     }
 }
