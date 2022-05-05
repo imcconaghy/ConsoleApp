@@ -41,6 +41,9 @@ namespace ConsoleApp.Week1Delegates
             m1 += expDelegateCalculator.ObjectCapacityCalculator;
 
             m1(9);
+
+            Multiplier2 m2 = expDelegate.SomeRandomFunction;
+            var r = m2();
         }
     }
 }

@@ -7,6 +7,8 @@ namespace ConsoleApp.ExpDelegates
     // declaring a delegate
     public delegate int Multiplier(int x);
 
+    public delegate int Multiplier2();
+
     public class ExpDelegate
     {
         
@@ -20,6 +22,11 @@ namespace ConsoleApp.ExpDelegates
         public int ObjectCapacity(int side)
         {
             return 2 * side;
+        }
+
+        public int SomeRandomFunction()
+        {
+            return 5;
         }
 
         public void SimpleDelegateCaller()
